@@ -1,0 +1,29 @@
+[package]
+name = "canvas-size-and-webgl"
+version = "0.1.0"
+authors = ["Josef Vlach"]
+edition = "2021"
+description = "Canvas size and WebGL"
+repository = ""
+license = ""
+homepage = "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Canvas_size_and_WebGL"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+js-sys = "0.3.61"
+wasm-bindgen = "0.2.84"
+
+[dependencies.web-sys]
+version = "0.3.61"
+features = [
+  'Document',
+  'HtmlCanvasElement',
+  'HtmlCollection',
+  'WebGl2RenderingContext',
+  'Window',
+]
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false

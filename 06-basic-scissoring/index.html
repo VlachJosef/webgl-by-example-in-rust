@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Clearing the drawing buffer when scissoring applies</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="basic-scissoring.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <p>Result of of scissoring.</p>
+    <canvas>Your browser does not seem to support HTML5 canvas.</canvas>
+    <script type="module">
+      // Use ES module import syntax to import functionality from the module
+      // that we have compiled.
+      //
+      // Note that the `default` import is an initialization function which
+      // will "boot" the module and make it ready to use. Currently browsers
+      // don't support natively imported WebAssembly as an ES module, but
+      // eventually the manual initialization won't be required!
+      import init from './pkg/basic_scissoring.js';
+
+      async function run() {
+        await init();
+      }
+      run();
+    </script>
+  </body>
+</html>

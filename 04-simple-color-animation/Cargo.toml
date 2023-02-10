@@ -1,0 +1,32 @@
+[package]
+name = "simple-color-animation"
+version = "0.1.0"
+authors = ["Josef Vlach"]
+edition = "2021"
+description = "Simple color animation"
+repository = ""
+license = ""
+homepage = "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/By_example/Simple_color_animation"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+js-sys = "0.3.61"
+wasm-bindgen = "0.2.84"
+
+[dependencies.web-sys]
+version = "0.3.61"
+features = [
+  'Document',
+  'Element',
+  'EventListener',
+  'HtmlCanvasElement',
+  'MouseEvent',
+  'PointerEvent',
+  'WebGl2RenderingContext',
+  'Window',
+]
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
